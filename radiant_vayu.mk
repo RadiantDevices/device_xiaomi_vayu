@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-# Inherit common ArrowOS configurations
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit common Radiant configurations
+$(call inherit-product, vendor/radiant/config/common_full_phone.mk)
 
-PRODUCT_NAME := arrow_vayu
+PRODUCT_NAME := radiant_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := Poco X3 Pro
@@ -29,7 +29,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
 
-# ArrowOS additions
-DEVICE_MAINTAINER := kubersharma001
+RADIANT_BUILD_TYPE := OFFICIAL
+
 $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 
